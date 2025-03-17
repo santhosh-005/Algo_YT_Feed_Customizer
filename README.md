@@ -1,8 +1,8 @@
-# Glgo - Your Personal YouTube Discovery Engine
+# Algo - Your Personal YouTube Discovery Engine
 
-Glgo is an intelligent recommendation system that analyzes your YouTube preferences to surface videos you'll genuinely want to watch. By examining your liked videos and search interests, Glgo creates a tailored viewing experience that goes beyond standard YouTube recommendations.
+Algo is an intelligent recommendation system that analyzes your YouTube preferences to surface videos you'll genuinely want to watch. By examining your liked videos and search interests, Algo creates a tailored viewing experience that goes beyond standard YouTube recommendations.
 
-## How Glgo Works
+## How Algo Works
 
 1. **YouTube Data Collection**: Fetches your liked videos and search results through the YouTube API
 2. **Text Embedding Generation**: Converts video titles and descriptions into vector representations using Gemini's embedding model
@@ -13,7 +13,7 @@ Glgo is an intelligent recommendation system that analyzes your YouTube preferen
 
 ### Embedding API Implementation
 
-Glgo uses Gemini's specialized embedding model rather than the standard Gemini Flash API:
+Algo uses Gemini's specialized embedding model rather than the standard Gemini Flash API:
 
 ```javascript
 const response = await fetch(
@@ -37,7 +37,7 @@ const response = await fetch(
 
 ## The Science Behind Recommendations: Cosine Similarity
 
-Glgo's recommendation engine relies on cosine similarity - a mathematical technique that measures the directional similarity between vectors:
+Algo's recommendation engine relies on cosine similarity - a mathematical technique that measures the directional similarity between vectors:
 
 1. Each video is transformed into a multi-dimensional vector based on its content
 2. These vectors capture the semantic essence of the videos
@@ -49,3 +49,4 @@ Glgo's recommendation engine relies on cosine similarity - a mathematical techni
 - **FAISS Integration**: Plans to implement Facebook AI Similarity Search for dramatically improved speed and scalability as the video database expands
 - **Enhanced Content Analysis**: Deeper understanding of video themes and context
 - **User Preference Learning**: Adaptive system that evolves with your changing interests
+
