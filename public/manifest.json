@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Algo - YouTube Feed Customizer",
+  "version": "1.0.0",
+  "description": "Personalized YouTube content recommendations based on your liked videos",
+  "action": {
+    "default_title": "Open Side Panel"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "tabs",
+    "activeTab",
+    "identity",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*",
+    "https://accounts.google.com/*",
+    "https://oauth2.googleapis.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "oauth2": {
+    "client_id": "334662568215-ooa3u8im7boov5q3cavvnb414cvupf9h.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/youtube.readonly"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}
